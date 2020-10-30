@@ -1,3 +1,3 @@
-idf_component_register(SRCS "raster-display.c"
+idf_component_register(SRCS "tft.c"
                        INCLUDE_DIRS "include")
 
