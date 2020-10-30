@@ -74,7 +74,7 @@ esp_err_t tft16_render(
         );
         return ESP_ERR_INVALID_ARG;
     }
-    if (x0 > 127 || x1 > 127) {
+    if (x0 >= tft->info.width || x1 >= tft->info.width) {
         ESP_LOGE(
             TFT_TAG,
             "tft16_render(...) requires x0 and x1 < width"
@@ -88,7 +88,7 @@ esp_err_t tft16_render(
         );
         return ESP_ERR_INVALID_ARG;
     }
-    if (y0 > 127 || y1 > 127) {
+    if (y0 >= tft->info.height || y1 >= tft->info.height) {
         ESP_LOGE(
             TFT_TAG,
             "tft16_render(...) requires y0 and y1 < height"
